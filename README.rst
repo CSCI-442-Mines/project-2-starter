@@ -473,8 +473,7 @@ Submission of your project will be handled via **Gradescope**.
 
 3. Submit this ``.zip`` file to Gradescope. You will get a confirmation email if you did this correctly.
 
-You can re-submit as many times as you want before the due date, but note the project will not be graded until
-a few days after the due date, **NOT** on-submission (similar to Canvas).
+You will have 2 attempts per deliverable (D1 and D2) on the autograder, make sure to run sufficient test locally before submitting it. The project will not be graded until a few days after the due date, **NOT** on-submission (similar to Canvas).
 
 .. warning::
         You are **REQUIRED** to use ``make-submission`` to form the ``.zip`` file. Failure to do so
