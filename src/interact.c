@@ -25,6 +25,13 @@ static void maybe_add_history(const char *string)
 	add_history(string);
 }
 
+static int get_user_name(char *user_buf, size_t size)
+{
+	struct passwd* = getpwuid(getuid());
+	memcpy(user_buf, passwd->pw_name, size);
+	return errno == 0 ? 0 : -1;
+}
+
 #define PROMPT_FMT "%s@%s %s %s $ "
 
 char *default_prompt_generator(int last_return_code)
@@ -38,7 +45,7 @@ char *default_prompt_generator(int last_return_code)
 	char *prompt;
 	size_t prompt_sz;
 
-	if (getlogin_r(user_buf, sizeof(user_buf)) < 0) {
+	if (get_user_name(user_buf, sizeof(user_buf)) < 0) {
 		fprintf(stderr, "Unable to get current username: %s\n",
 			strerror(errno));
 		user = "???";
