@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <pwd.h>
 
 #include <readline/readline.h>
 #include <readline/history.h>
@@ -27,8 +28,8 @@ static void maybe_add_history(const char *string)
 
 static int get_user_name(char *user_buf, size_t size)
 {
-	struct passwd* = getpwuid(getuid());
-	memcpy(user_buf, passwd->pw_name, size);
+	struct passwd *pw = getpwuid(getuid());
+	strncat(user_buf, pw->pw_name, size);
 	return errno == 0 ? 0 : -1;
 }
 
@@ -36,7 +37,7 @@ static int get_user_name(char *user_buf, size_t size)
 
 char *default_prompt_generator(int last_return_code)
 {
-	char user_buf[256];
+	char user_buf[256] = { 0 };
 	char hostname_buf[256] = { 0 };
 	char cwd_buf[PATH_MAX];
 	const char *user = user_buf;
