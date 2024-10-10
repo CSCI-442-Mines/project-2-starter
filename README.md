@@ -5,7 +5,7 @@
 
 > [!IMPORTANT]
 >
-> - You\'ll want to read this **entire document** before beginning the
+> - You'll want to read this **entire document** before beginning the
 >   project. Please ask any questions you have on Piazza, but only if
 >   this README does not answer your question.
 > - Do **NOT** open any of the projects in a windows operating system.
@@ -86,7 +86,7 @@ you submit Deliverable 2.
 
 Should you choose to go without starter code (or discard portions of
 it), all functionality provided by the starter code is due with the
-first deliverable, with the exception of the \"history\" and \"help\"
+first deliverable, with the exception of the "history" and "help"
 builtin commands, noted below.
 
 Through this document, the term _whitespaces_ or _whitespace characters_
@@ -180,7 +180,8 @@ executable bit set)
 
 The following information has already been implemented in the starter
 code. If you want to use all the starter code, then you can skip ahead
-to Section 4 and then begin working on handling an external command.
+to the [An Introduction to the Starter Code](#additional-resources)
+section and then begin working on handling an external command.
 
 If you do not wish to use the starter code, you must read sections 3.4 -
 3.4.4 to have the proper formatting that the grader will expect when
@@ -309,7 +310,7 @@ directory, etc.), your shell should print an approprite error message on
 >
 > The provided starter code also implements `history` and `help` builtin
 > commands. It is not required that you implement these. You are free to
-> discard these commands if you don\'t want them.
+> discard these commands if you don't want them.
 
 Finally, builtin commands (`cd` and `exit`) do not need to work with
 pipelines of more than a single command, nor input or output files.
@@ -330,14 +331,14 @@ The starter code provides an input loop, input parser, and builtin
 commands, as well as a Makefile, but does not dictate how you should
 structure the code for external commands, pipelines, or redirection.
 
-It\'s **up to you** to break your code into useful helper functions, or
+It's **up to you** to break your code into useful helper functions, or
 even separate files entirely.
 
-You\'ll want to start taking a look at `src/dispatcher.c`, where
+You'll want to start taking a look at `src/dispatcher.c`, where
 `dispatch_external_command` will be the _entry point_ into your code. If
-you do it right, hopefully you\'ll find that `dispatch_external_command`
+you do it right, hopefully you'll find that `dispatch_external_command`
 turns out to just be a very short function that calls out to some of
-your other functions that you\'ve written.
+your other functions that you've written.
 
 If you are just opening the starter code and want to look for somewhere
 to start, try this:
@@ -347,15 +348,11 @@ to start, try this:
 2.  Run `./shell`. Observe the working builtin commands, and what
     happens if you try to run an external command.
 3.  Run `./parseview` and type some commands. Each output shows the
-    resultant `struct command` structure than you\'ll get at
+    resultant `struct command` structure than you'll get at
     `dispatch_external_command`. Use this tool to rationalize the
     meaning of each of the fields in the struct.
 4.  Open the `src/dispatcher.c`, read thru the comments in there.
 5.  Start hacking away at `dispatch_external_command`!
-6.  If you\'re using VS Code, open the provided
-    [project-2.code-workspace](project-2.code-workspace) to use VS
-    Code\'s built-in debugger (Make sure to install the recommended
-    extensions when prompted).
 
 ## Reference Executables
 
@@ -374,7 +371,7 @@ the reference executables:
 
 ## Grading
 
-Each deliverable is 50% of the grade. For each deliverable, you\'ll be
+Each deliverable is 50% of the grade. For each deliverable, you'll be
 graded on:
 
 - Functionality (the specific features we ask for in this document).
@@ -404,13 +401,24 @@ graded on:
 
 ## Additional Resources
 
-- Don\'t forget the man pages! System functions are under `man 2`, and
+- Don't forget the man pages! System functions are under `man 2`, and
   library functions under `man 3`.
 - Ask questions in the online discussion board. If you are going to
   post code, please keep the post private as to comply with the
   collaboration policy.
 - Please attend office hours if you find yourself falling behind.
-  Don\'t wait until the last week to seek help.
+  Don't wait until the last week to seek help.
+
+## Tips
+
+### 1: Use the VS Code workspace
+
+If you're using VS Code (which we recommend), you can open the
+[`project-2.code-workspace`](project-2.code-workspace) file and click
+the `Open Workspace` button. This will open the project in a new window
+with the recommended settings. We've also included a debug configuration,
+allowing you to debug your program - all you need to do is go to the
+debug tab and click the green play button.
 
 ## Collaboration Policy
 
@@ -422,6 +430,9 @@ Please see the syllabus for the full collaboration policy.
 > [!WARNING]
 >
 > **Plagarism will be punished harshly!**
+
+Please do keep any Git repos private, even after you finish this course.
+This will keep the project fun for future students!
 
 ## Submitting Your Project
 
