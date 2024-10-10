@@ -397,7 +397,9 @@ by yourself. You should not share your code with others.
 
 Please see the syllabus for the full collaboration policy.
 
-> [!WARNING] > **Plagarism will be punished harshly!**
+> [!WARNING]
+>
+> **Plagarism will be punished harshly!**
 
 ## Submitting Your Project
 
@@ -414,6 +416,7 @@ Submission of your project will be handled via **Gradescope**.
 3.  Submit this `.zip` file to Gradescope. You will get a confirmation
     email if you did this correctly.
 
-    > WARNING: You are **REQUIRED** to use `make-submission` to form the
-    > `.zip` file. Failure to do so may cause your program to not
-    > compile on Gradescope.
+> [!WARNING]
+> You are **REQUIRED** to use `make-submission` to form the
+> `.zip` file. Failure to do so may cause your program to not
+> compile on Gradescope.
