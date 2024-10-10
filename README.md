@@ -121,18 +121,24 @@ returning to the prompt. See `man 2 wait` for info on how to do this.
 \[D2\] Your shell should be able to handle an arbitrary number of
 commands piped together. For example:
 
-    command1 | command2 | command3 | command4
-    command1 arg1 arg2 | command2 | command3 arg1 arg2
-    command1 < inputfile | command2 | command3 > outputfile
+```shell
+command1 | command2 | command3 | command4
+command1 arg1 arg2 | command2 | command3 arg1 arg2
+command1 < inputfile | command2 | command3 > outputfile
+```
 
 For an example of a real piped command, try this (which gives the number
 of lines in `mains/parseview.c` which contain the word `int`):
 
-    cat mains/parseview.c | grep int | wc -l
+```shell
+cat mains/parseview.c | grep int | wc -l
+```
 
 Or maybe use `cat` on a previous command:
 
-    date | cat | cat | cat
+```shell
+date | cat | cat | cat
+```
 
 For this command, you should get the current date (assuming your shell
 handles pipes properly).
@@ -153,9 +159,11 @@ file), `>>` (append to a file), or `<` (input from a file).
 
 For example:
 
-    command > file-to-write-or-overwrite.txt
-    command >> file-to-append-to.txt
-    command < file-to-get-input-from-as-stdin.txt
+```shell
+command > file-to-write-or-overwrite.txt
+command >> file-to-append-to.txt
+command < file-to-get-input-from-as-stdin.txt
+```
 
 \[D2\] For `>` and `>>`, you should create the file if it does not
 exist.
@@ -250,11 +258,25 @@ scenarios apply:
 
 The following are valid example commands:
 
-- `arg`
-- `arg1   arg2`
-- `arg1 arg2 >outfile <infile`
-- `<  infile arg1 >outfile arg2`
-- `arg1 arg2   arg3  <  input_file arg4 | cmd2_arg1 >> append_file`
+```shell
+arg
+```
+
+```shell
+arg1   arg2
+```
+
+```shell
+arg1 arg2 >outfile <infile
+```
+
+```shell
+<  infile arg1 >outfile arg2
+```
+
+```shell
+arg1 arg2   arg3  <  input_file arg4 | cmd2_arg1 >> append_file
+```
 
 > [!IMPORTANT] > **For Deliverable 1 only**
 >
@@ -408,7 +430,9 @@ Submission of your project will be handled via **Gradescope**.
 1.  Create the submission file using the provided `make-submission`
     script:
 
-        prompt> ./make-submission
+```shell
+./make-submission
+```
 
 2.  This will create a `.zip` file named `$USER-submission` (e.g., for
     me, this would be named `lhenke-submission.zip`).
