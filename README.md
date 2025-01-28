@@ -6,7 +6,7 @@
 > [!IMPORTANT]
 >
 > - You'll want to read this **entire document** before beginning the
->   project. Please ask any questions you have on Piazza, but only if
+>   project. Please ask any questions you have on Ed Discussion, but only if
 >   this README does not answer your question.
 > - Do **NOT** open any of the projects in a windows operating system.
 >   This will change the line endings and causes strange errors. Always
