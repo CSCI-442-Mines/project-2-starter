@@ -54,7 +54,6 @@ project conforms to the requirements outlined here.
 General requirements for all deliverables:
 
 - You are required to use the Docker environment you set up in Project
-  1.  The Gradescope enviroment is the same as Docker environment.
 - Your code must be written using only the C programming language. Do
   not extend using additional languages. The exception is for the
   Makefile for your project, which is already sufficient for this
