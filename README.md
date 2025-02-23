@@ -1,6 +1,8 @@
 # CSCI-442 Project 2: UNIX Shell
 
-> [!WARNING] Please see the assignment on Canvas for dates.
+> [!WARNING]
+>
+> Please see the assignment on Canvas for dates.
 
 > [!IMPORTANT]
 >
@@ -124,7 +126,9 @@ date | cat | cat | cat
 
 For this command, you should get the current date (assuming your shell handles pipes properly).
 
-> [!IMPORTANT] You may not make use of temporary files in your implementation of pipes. This means
+> [!IMPORTANT]
+>
+> You may not make use of temporary files in your implementation of pipes. This means
 > you are going to have to use the `pipe(2)` system call.
 >
 > Additionally, you are not expected to support more than `PIPE_BUF` bytes sent between two
@@ -186,7 +190,9 @@ The prompt must end with `$`, followed by a single space.
 You can include any additional text in the prompt as you wish, so as long as the above requirements
 are held true.
 
-> [!IMPORTANT] Note: The starter code implements the prompt functionality in `src/interact.c`, and
+> [!IMPORTANT]
+>
+> Note: The starter code implements the prompt functionality in `src/interact.c`, and
 > provides the following pre-implemented prompt line, which meets the above requirements:
 >
 > - Username
@@ -242,7 +248,9 @@ arg1 arg2 >outfile <infile
 arg1 arg2   arg3  <  input_file arg4 | cmd2_arg1 >> append_file
 ```
 
-> [!IMPORTANT] > **For Deliverable 1 only**
+> [!IMPORTANT]
+>
+> **For Deliverable 1 only**
 >
 > You may assume the characters `|`, `<`, and `>` do not appear in the
 > input.
@@ -263,7 +271,9 @@ For all bulitin commands, if the user provides an invalid input (such as incorre
 arguments, provides a non-existent file or directory, etc.), your shell should print an approprite
 error message on `stderr` and indicate the command failure status in the prompt.
 
-> [!IMPORTANT] Note: All required builtin commands are implemented in the starter code (in
+> [!IMPORTANT]
+>
+> Note: All required builtin commands are implemented in the starter code (in
 > `src/shell_builtins.c`) for you already. This is provided for reference if you decide to not use
 > that portion of the starter code.
 >
@@ -339,7 +349,9 @@ Each deliverable is 50% of the grade. For each deliverable, you'll be graded on:
   - Code submitted with `make submission`
 - For D2 only: no regressed features from D1.
 
-> [!WARNING] You will receive a zero on the project if your code anyhow depends on one of the system
+> [!WARNING]
+>
+> You will receive a zero on the project if your code anyhow depends on one of the system
 > shells. Do not use `system()` or `popen()`: these depend on the system shells.
 
 ## Additional Resources
@@ -391,5 +403,7 @@ make submission
 3.  Submit this `.zip` file to Gradescope. You will get a confirmation email if you did this
     correctly.
 
-> [!WARNING] You are **REQUIRED** to use `make submission` to form the `.zip` file. Failure to do so
+> [!WARNING]
+>
+> You are **REQUIRED** to use `make submission` to form the `.zip` file. Failure to do so
 > may cause your program to not compile on Gradescope.
