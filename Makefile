@@ -86,3 +86,7 @@ $(OUTDIR)/release/%.o: %.c
 .PHONY: clean
 clean:
 	$(call cmd,clean,$(OUTDIR) $(BINS_debug) $(BINS_release))
+
+submission: all
+	@read -p "Enter your Mines multipass username: " USERNAME && \
+	zip -r "$${USERNAME}-submission.zip" ./Makefile ./include ./mains ./src ./override.token
